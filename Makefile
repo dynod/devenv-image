@@ -1,7 +1,7 @@
 # Makefile for Docker images
 
 # Setup roots
-WORKSPACE_ROOT := $(CURDIR)/..
+WORKSPACE_ROOT := $(CURDIR)/../..
 PROJECT_ROOT := $(CURDIR)
 DEVENV_ROOT := $(WORKSPACE_ROOT)/tools/devenv
 
