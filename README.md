@@ -1,2 +1,2 @@
-# images
-Docker images for the various needs of the dynod project
+# devenv-image
+Docker image for the dynod project devenv requirements
