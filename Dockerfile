@@ -6,7 +6,7 @@ RUN ( \
     apt update && \
     apt upgrade -y && \
     apt dist-upgrade -y && \
-    apt install -y sudo locales repo make python3 python3-venv python3.8 python3.8-venv libpython3.8-dev build-essential && \
+    apt install -y sudo locales make python3 python3-venv python3.8 python3.8-venv libpython3.8-dev build-essential wget && \
     apt -y autoclean && \
     apt -y autoremove \
     )
@@ -26,6 +26,9 @@ RUN ( \
     sed -i '/crontab/d' /var/lib/dpkg/statoverride && \
     sed -i '/messagebus/d' /var/lib/dpkg/statoverride \
     )
+
+# Install repo launcher
+RUN wget https://storage.googleapis.com/git-repo-downloads/repo -O /usr/bin/repo && sudo chmod a+rx /usr/bin/repo
 
 # Add user
 RUN ( \
