@@ -6,7 +6,7 @@ RUN ( \
     apt update && \
     apt upgrade -y && \
     apt dist-upgrade -y && \
-    apt install -y sudo locales make python3 python3-venv python3.8 python3.8-venv libpython3.8-dev build-essential wget && \
+    apt install -y sudo locales make python python3 python3-venv python3.8 python3.8-venv libpython3.8-dev build-essential wget && \
     apt -y autoclean && \
     apt -y autoremove \
     )
